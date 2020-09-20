@@ -13,5 +13,3 @@ print("And now it lives on GitHub")
 # git add . --select all files  or git add "file name" 
 # git commit -m "comment"
 # git push origin master
-
-##Added change test
