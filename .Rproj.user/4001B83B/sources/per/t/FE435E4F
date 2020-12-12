@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1600573270597.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "903792309",
+    "id" : "FE435E4F",
+    "lastKnownWriteTime" : 1600647756,
+    "last_content_update" : 1600647754859,
+    "path" : "E:/Grocery Chain project/Initial zip code-census table.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "38,19",
+        "scrollLine" : "33",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1600644418652.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CABF4F84",
+    "lastKnownWriteTime" : 2337660092416,
+    "last_content_update" : 1600644418652,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "AACB5B56",
+        "caption" : "zip_merge2",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=zip_merge2&cache_key=AACB5B56",
+        "displayedObservations" : "1833",
+        "environment" : "",
+        "expression" : "zip_merge2",
+        "object" : "zip_merge2",
+        "preview" : "0",
+        "totalObservations" : "1833",
+        "variables" : "10"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

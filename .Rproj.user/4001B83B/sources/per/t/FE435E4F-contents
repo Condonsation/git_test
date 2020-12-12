@@ -1,0 +1,49 @@
+library(dplyr)
+
+zip_codes <- read.csv("https://raw.githubusercontent.com/stanleywtlim/gannonproject/data/Store_Zip%20locations.csv?token=AQYYCVO32ENTQZCYMWMFF5S7M3H52", header = TRUE)
+zip_codes$duplicate <- duplicated(zip_codes$STORE.NUMBER) ##Checked for duplicate store numbers and found none
+zip_codes$duplicate <- NULL ##Deleted boolean column checking for duplicates
+zip_codes <- tbl_df(zip_codes) ##call dplyr function for easier sorting
+
+##Read in zip table with county info and prepare for left join
+zip_county <- read.csv(file.path("usazipcode-county.csv")) ##bringing in zip-pcounty table
+zip_county <- tbl_df(zip_county) ##call dplyr function for easier sorting
+zip_county = rename(zip_county, ZIPCODE = zip) ##rename "zip" column "ZIPCODE" as primary key
+
+##Run left join on tables
+zip_merge <- merge(x = zip_codes, y = zip_county, by = "ZIPCODE", all.x = TRUE)
+sum(is.na(zip_merge)) ##Check for NA--0
+table(zip_merge$State)##Store locations in AL, FL, GA, LA, MS, NC, SC, & TN
+
+zip_merge %>% filter(State == "FL") ##Best guess at chain is Winn-Dixie
+
+##Import FIPS coding to figure out needed CBG dfs by state and county coding
+cbg_fips_codes <- read_csv("safegraph_open_census_data/metadata/cbg_fips_codes (county removed).csv")
+View(cbg_fips_codes)
+
+##left join zip code and county info with fips coding info 
+zip_merge = rename(zip_merge, County = County.Name)
+cbg_fips_codes$County <- toupper(cbg_fips_codes$County)
+cbg_fips_filterd <- cbg_fips_codes %>% filter(state %in% c("AL", "FL", "GA", "LA", "MS", "NC", "SC", "TN"))
+
+
+#cbg_fips_filterd$state <- NULL
+zip_merge2 <- merge(x = zip_merge, y = cbg_fips_filterd, by = "County", all.x = TRUE) ##NOT CORRECT##
+zip_merge2 <- tbl_df(zip_merge2)
+summary(zip_merge)
+str(zip_merge2)
+zip_merge$County <- as.character(zip_merge$County)
+zip_merge2$state <- as.character(zip_merge2$state)
+zip_merge2$State <- as.character(zip_merge2$State)
+
+head(zip_merge2,20)
+
+##NOTES## MISSING 14 values after filtering. Something wrong with the merge
+subset(zip_merge2, State != state)
+
+as.factor(zip_merge2$state)
+
+
+##Filter out repeat
+test <- distinct(zip_merge2, STORE.NUMBER, .keep_all = TRUE) 
+subset(test, State != state)

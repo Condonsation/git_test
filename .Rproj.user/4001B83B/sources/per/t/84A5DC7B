@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1600545320968.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2183189599",
+    "id" : "84A5DC7B",
+    "lastKnownWriteTime" : 1600573210,
+    "last_content_update" : 1600573210649,
+    "path" : "C:/Users/ganno/Desktop/test/Testing commit.R",
+    "project_path" : "Testing commit.R",
+    "properties" : {
+        "cursorPosition" : "6,2",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

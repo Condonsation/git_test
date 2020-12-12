@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1600641744669.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "884B8CB3",
+    "lastKnownWriteTime" : 7160569971446915616,
+    "last_content_update" : 1600641744669,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "BB9C1C78",
+        "caption" : "cbg_fips_codes",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=cbg_fips_codes&cache_key=BB9C1C78",
+        "displayedObservations" : 3235,
+        "environment" : "",
+        "expression" : "cbg_fips_codes",
+        "object" : "cbg_fips_codes",
+        "preview" : 0,
+        "totalObservations" : 3235,
+        "variables" : 7
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
